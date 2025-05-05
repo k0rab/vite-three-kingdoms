@@ -1,0 +1,43 @@
+{
+  "name": "@91life/nx-mf-vite",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{workspaceRoot}/dist/packages/nx-mf-vite"
+        ],
+        "options": {
+          "main": "packages/nx-mf-vite/src/index.ts",
+          "outputPath": "dist/packages/nx-mf-vite",
+          "tsConfig": "packages/nx-mf-vite/tsconfig.lib.json",
+          "assets": [
+            {
+              "input": "packages/nx-mf-vite",
+              "glob": "generators.json",
+              "output": "."
+            },
+            {
+              "input": "packages/nx-mf-vite/src/generators",
+              "glob": "**/*",
+              "output": "generators"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@nx/devkit": "^20.8.1",
+    "@originjs/vite-plugin-federation": "^1.1.9",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@nx/react": "20.8.1",
+    "@nx/vite": "20.8.1",
+    "@vitejs/plugin-react": "4.2.1"
+  }
+}
