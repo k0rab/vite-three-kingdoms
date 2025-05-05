@@ -98,4 +98,4 @@ packages/
 
 ---
 
-**Contact**: [Your Email] | [LinkedIn Profile]  
+**Contact**: kjashar31@gmail.com | [LinkedIn Profile](https://www.linkedin.com/in/korabjashari/)
