@@ -84,12 +84,24 @@ packages/
   ```bash  
   # Initial generator attempt  
   nx g @91life/nx-mf-vite:setup-vite-mf --project=host --type=host  
-  ```  
+  ```
+
+  ## Technical Notes  
+
+### Nx Plugin Development  
+Developed a custom generator (`@91life/nx-mf-vite`) to automate:  
+- Vite configuration  
+- Shared dependency management  
+- Port assignments  
+
+While the generator logic is fully implemented, final workspace integration requires:  
+```bash
+nx g @91life/nx-mf-vite:setup-vite-mf --project=host --type=host
 
 ## Future Improvements  
 1. Complete Nx plugin integration  
 2. Add shared UI component library  
-3. Implement CI/CD pipeline with automated testing  
+3. Implement CI/CD pipeline with automated testing
 
 ## Acknowledgments  
 - **Vite** for blazing-fast tooling  
